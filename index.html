@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>rain</title>
+
+	<style type="text/css">
+		#mybody{width: 800px; margin: auto; background-color: black;}
+		#aaa{margin: auto; display: block; position: absolute; margin-top: 70px; width: 500px;z-index: 1;}
+		#bbb{margin: auto; display: block; position: absolute; margin-top: 400px; width: 300px; margin-left: 350px;z-index: 2;}
+		#ccc{margin: auto; display: block; position: absolute; margin-top: 90px; margin-left: 600px; width: 230px;z-index: 2; opacity: 0;}
+		#ddd{margin: auto; display: block; position: absolute; margin-top: 300px; margin-left: 600px; width: 230px;z-index: 2; opacity: 0;}
+		#eee{margin: auto; display: block; position: absolute; margin-top: 470px; margin-left: 600px; width: 230px;z-index: 2; opacity: 0;}
+		#fff{margin: auto; display: block; position: absolute; margin-top: 670px; margin-left: 600px; width: 230px;z-index: 2; opacity: 0;}
+
+	</style>
+
+</head>
+<body id="mybody">
+	<img src="01.gif" id="aaa">
+	<img src="02.gif" id="bbb">
+	<img src="03.gif" id="ccc">
+	<img src="04.gif" id="ddd">
+	<img src="05.gif" id="eee">
+	<img src="06.gif" id="fff">
+
+
+	<audio id="rain" loop>
+ 	<source src="aa.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="bb" loop>
+ 	<source src="bb.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="cc" loop>
+ 	<source src="cc.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="dd" loop>
+ 	<source src="dd.mp3" type="audio/mpeg">
+	</audio>
+	<audio id="ee" loop>
+ 	<source src="ee.mp3" type="audio/mpeg">
+	</audio>
+
+	<script type="text/javascript">
+		bbb.onclick = function(){
+			rain.play();
+			rain.volume = "0.3";
+			bbb.style.opacity = "0"
+			ccc.style.opacity = "1"
+			ddd.style.opacity = "1"
+			eee.style.opacity = "1"
+			fff.style.opacity = "1"
+			}
+
+		var astate = "off"
+		ccc.onclick = function(){
+			if(astate == "off"){
+				ccc.style.opacity = "0.3";
+				ccc.src = "03.gif";
+				bb.play();
+				astate = "on";
+				bb.volume = "0.3";
+				ddd.style.opacity = "0";
+				eee.style.opacity = "0";
+				fff.style.opacity = "0";
+			}else{
+				ccc.style.opacity = "1";
+				bb.pause();
+				astate = "off";
+				ccc.src = "03.gif"
+				ddd.style.opacity = "1";
+				eee.style.opacity = "1";
+				fff.style.opacity = "1";
+			}
+		}
+		var astate = "off"
+		ddd.onclick = function(){
+			if(astate == "off"){
+				ddd.style.opacity = "0.3";
+				ddd.src = "04.gif";
+				cc.play();
+				astate = "on";
+				cc.volume = "0.3";
+				ccc.style.opacity = "0";
+				eee.style.opacity = "0";
+				fff.style.opacity = "0";
+			}else{
+				ddd.style.opacity = "1";
+				cc.pause();
+				astate = "off";
+				ddd.src = "04.gif";
+				ccc.style.opacity = "1";
+				eee.style.opacity = "1";
+				fff.style.opacity = "1";
+			}
+		}
+
+		var astate = "off"
+		eee.onclick = function(){
+			if(astate == "off"){
+				eee.style.opacity = "1";
+				eee.src = "05.gif";
+				dd.play();
+				astate = "on";
+				dd.volume = "0.9";
+				ccc.style.opacity = "0";
+				ddd.style.opacity = "0";
+				fff.style.opacity = "0";
+			}else{
+				eee.style.opacity = "1";
+				dd.pause();
+				astate = "off";
+				eee.src = "05.gif"
+				ccc.style.opacity = "1";
+				ddd.style.opacity = "1";
+				fff.style.opacity = "1";
+			}
+		}
+
+		var astate = "off"
+		fff.onclick = function(){
+			if(astate == "off"){
+				fff.style.opacity = "1";
+				fff.src = "06.gif";
+				ee.play();
+				astate = "on";
+				ee.volume = "0.3";
+				ccc.style.opacity = "0";
+				ddd.style.opacity = "0";
+				eee.style.opacity = "0";
+			}else{
+				fff.style.opacity = "1";
+				ee.pause();
+				astate = "off";
+				fff.src = "06.gif"
+				ccc.style.opacity = "1";
+				ddd.style.opacity = "1";
+				eee.style.opacity = "1";
+			}
+		}
+
+	</script>
+
+</body>
+</html>
